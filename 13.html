@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="texto">Valor guardado: R$0.00</h1>
+    <div id="resposta"></div>
+    <br>
+    <button onclick="g5()">Guardar R$5,00</button>
+    <button onclick="g10()">Guardar R$10,00</button>
+    <br>
+    <span style="color: red;"></span>
+
+</body>
+</html>
+
+
+<script>
+
+    var guard5 = 5
+    var guard10 = 10
+    var total = 0
+
+    function g5(){
+        total = total + 5
+        texto.innerHTML=`Valor guardado: R$${total.toFixed(2)}`
+
+        if(total <= 100){
+            resposta.innerHTML=`<span style="color: blue;">Finanças OK</span>`
+        } else if(total > 100 ){
+            resposta.innerHTML=`#ostentação`
+        }else if(total < 0 ){
+            resposta.innerHTML=`<span style="color: red;">Finanças em perigo</span>`
+        }else if(total < -20 ){
+            resposta.innerHTML=`Seu nome vai ficar sujo, hein?`
+        }
+
+        
+    }
+
+    function g10(){
+        total = total + 10
+        texto.innerHTML=`Valor guardado: R$${total.toFixed(2)}`
+
+        if(total <= 100){
+            resposta.innerHTML=`<span style="color: blue;">Finanças OK</span> `
+        } else if(total > 100 ){
+            resposta.innerHTML=`#ostentação`
+        }else if(total < 0 ){
+            resposta.innerHTML=`<span style="color: red;">Finanças em perigo</span> `
+        }else if(total < -20 ){
+            resposta.innerHTML=`Seu nome vai ficar sujo, hein?`
+        }
+
+    }
+
+</script>
