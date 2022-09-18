@@ -16,16 +16,14 @@
     var click = 0
     function calc(){
         
-        
-
         if(click <= 5){
-            resposta.innerHTML=` ${++click }<br> Dedo fraquinho, hein`
+            resposta.innerHTML=` ${click++ }<br> Dedo fraquinho, hein`
         }else if(click <= 10){
-            resposta.innerHTML=`${++click }<br> Dedo bom, mano`
+            resposta.innerHTML=`${click++ }<br> Dedo bom, mano`
         }else if(click <= 15){
-            resposta.innerHTML=`${++click }<br> Gosta de clicar, hein!`
+            resposta.innerHTML=`${click++ }<br> Gosta de clicar, hein!`
         }else{
-            resposta.innerHTML=`${++click }<br> Eita dedo nervoso!`
+            resposta.innerHTML=`${click++}<br> Eita dedo nervoso!`
         }
     }
 </script>

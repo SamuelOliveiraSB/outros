@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="herois" onchange="sla()">
+        <option value="s">metal night</option>
+        <option value="a">mascara doce</option>
+        <option value="s"> prisioneiro puri puri</option>
+        <option value="b">fubuki</option>
+        <option value="c">cavaleiro sem licença</option>
+    </select>
+    <div id="resposta"></div>
+</body>
+</html>
+
+<script>
+    function sla(){
+        var escolher_classe = herois.value
+
+       
+            resposta.innerHTML=` Esse(a) herói(na) é da classe ${escolher_classe}`
+        
+    }
+</script>
