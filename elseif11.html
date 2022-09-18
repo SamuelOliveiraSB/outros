@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="tabelinha" onchange="sla()">
+        <option value="">selecionar</option>
+        <option value="janeiro">janeiro</option>
+        <option value="fevereiro">fevereiro</option>
+        <option value="março">março</option>
+        <option value="abril">abril</option>
+        <option value="maio">maio</option>
+        <option value="junho">junho</option>
+        <option value="julho">julho</option>
+        <option value="agosto">agosto</option>
+        <option value="setembro">setembro</option>
+        <option value="outubro">outubro</option>
+        <option value="novembro">novembro</option>
+        <option value="dezembro">dezembro</option>
+    </select>
+
+    <p id="nome"></p>
+    <img id="ft" src="" alt="">
+    
+
+</body>
+</html>
+
+<script>
+    function sla(){
+        var table = tabelinha.value
+        var primavera = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRChFdUCqNKkq7TrLadk9aHhDZdsrP1INvF0-ECMqLy668eIVtp-gbZQ0WsNlv3sVjXGU4&usqp=CAU'
+
+        var inverno = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp982oU4CM_4upVnqQcBye5MB5tECeXqD7Qw&usqp=CAU'
+
+        var outono = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6Dn_hLkbZwBgWdncOuK1-0gjN-ukyeT1SqRqt0M7LQx2sNiaEcU__Rshe50bv1XJbCo&usqp=CAU'
+
+        var verao = 'https://static.vecteezy.com/ti/fotos-gratis/t2/6861167-verao-ferias-conceito-banner-de-cadeiras-de-praia-e-acessorios-na-praia-ilustracao-3d-foto.jpg'
+
+
+        if(tabelinha.value == 'janeiro'){
+            nome.innerHTML=`verão`
+            ft.src = verao
+            
+        }else if(tabelinha.value == 'fevereiro'){
+            nome.innerHTML=`verão`
+            ft.src = verao
+            
+        }else if(tabelinha.value == 'março'){
+            nome.innerHTML=`outono`
+            ft.src = verao
+            
+        }else if(tabelinha.value == 'abril'){
+            nome.innerHTML=`outono`
+            ft.src = outono
+            
+        }else if(tabelinha.value == 'maio'){
+            nome.innerHTML=`outono`
+            ft.src = outono
+
+        }else if(tabelinha.value == 'junho'){
+            nome.innerHTML=`Inverno`
+            ft.src = inverno
+            
+        }else if(tabelinha.value == 'julho'){
+            nome.innerHTML=`Inverno`
+            ft.src = inverno
+            
+        }else if(tabelinha.value == 'agosto'){
+            nome.innerHTML=`Inverno`
+            ft.src = inverno
+            
+        }else if(tabelinha.value == 'setembro'){
+            nome.innerHTML=`primavera`
+            ft.src = primavera
+            
+        }else if(tabelinha.value == 'outubro'){
+            nome.innerHTML=`primavera`
+            ft.src = primavera
+            
+        }else if(tabelinha.value == 'novembro'){
+            nome.innerHTML=`Inverno`
+            ft.src = primavera
+            
+        }
+    }
+</script>
+

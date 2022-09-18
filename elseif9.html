@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    qual sua meta de economia <input type="text" id="meteconomy">
+    <br>
+    quanto tem guardado <input type="text" id="qtquardado">
+    <br>
+    <button onclick="calc()">Analisar economia</button>
+    <br>
+    <div id="resposta"></div>
+</body>
+</html>
+
+<script>
+    function calc(){
+        var meta = Number(meteconomy.value)
+
+        var quant = Number(qtquardado.value)
+
+        var metadedameta = Number(meteconomy.value) / 2
+
+
+
+        if (quant == meta) {
+            resposta.innerHTML=`Parabéns, meta alcançada!`
+
+        }else if(quant > meta ){
+            resposta.innerHTML=`Parabéns, meta alcançada! ${'<br>'} Meta ultrapassada em ${quant - meta }`
+        }else{
+            resposta.innerHTML=`Força! Ainda em busca da meta! Falta ${meta - quant }`
+        }
+    }
+</script>
