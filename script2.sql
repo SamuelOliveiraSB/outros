@@ -71,3 +71,14 @@ select * from acompanhante;
 desc acompanhante;
 
 select * from aluno;
+
+select * from aluno join projeto on idprojeto = fkprojeto;
+
+select * from aluno join acompanhante on idaluno = fkaluno;
+
+select* from aluno as rep join aluno as a on rep.fkrepresentante = a.idaluno; 
+
+select *from projeto as p join aluno as a on a.fkprojeto = p.idprojeto where p.nome = 'scrumm';
+
+select *from aluno  join projeto on fkprojeto = idprojeto join acompanhante on idaluno = fkaluno;
+
