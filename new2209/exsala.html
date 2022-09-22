@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="nome fruta" type="text" id="nfrut">
+    <input placeholder="valor fruta" type="text" id="vfrut">
+    <button onclick="calc()">vou comprar?</button>
+</body>
+</html>
+
+<script>
+function calc(){
+    var nome = nfrut.value
+    var valor = Number(vfrut.value)
+
+    if(nome == 'uva' && valor < 8.50){
+        alert(`vou comprar!`)
+    }else{
+        alert(`sem fruta hj :(`)
+    }
+}
+</script>
