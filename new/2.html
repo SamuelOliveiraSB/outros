@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="in_frase" onkeyup="descrever()">
+
+    <div id="div_descricao"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function descrever() {
+
+        var frase = in_frase.value
+
+        var tamanho = frase.length
+    
+        var tems = frase.indexOf('c') >= 0
+
+        var alta = frase.toUpperCase()
+        var baixa = frase.toLowerCase()
+
+        var trocar = frase.replaceAll('a','@')
+       
+
+        div_descricao.innerHTML=`
+          o texto tem  ${tamanho} caracteres <br>
+          o texto tem a litra 'b' ? ${tems}<br>
+          como ele ficaria em caixa alta ${alta} <br>
+          como ele ficaria em caixa baixa ${baixa} <br>
+           se eu trocasse todos os 'a' por @: ${trocar} `
+
+    }
+
+</script>
