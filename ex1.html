@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Água engarrafada" type="text" id="agua">
+    <br>
+    <input placeholder="Coco fechado" type="text" id="coca">
+    <br>
+    <button onclick="calc()">Abrir o quiosque</button>
+
+    <div id="resp"></div>
+
+    <h1>registrar venda</h1>
+    <input placeholder="quantidade" type="text" id="quanti">
+    <br>
+    <select name="" id="prod">
+        <option value="Água engarrafada">Água engarrafada</option>
+        <option value="Coco fechado">Coco fechado</option>
+    </select>
+    <br>
+    <button onclick="calcc()">Registrar a Venda</button>
+    <button onclick="encerrar()">Encerrar o Turno</button>
+</body>
+</html>
+
+<script>
+
+    var total1 = 0 
+    var total2 = 0
+
+    function calc(){
+        var ag = Number(agua.value)
+        var cf = Number(coca.value)
+
+        var entre1 = ag > 100 && ag < 1000
+        var entre2 = cf > 200 && cf < 2000
+
+        if(ag < 100){
+            resp.innerHTML+=`Com essa quantidade de Água engarrafada não dá para abrir o quiosque<br>`
+        }else if(cf < 200){
+            resp.innerHTML+=`Com essa quantidade de Coco fechado não dá para abrir o quiosque<br>`
+        }else if(entre1){
+            resp.innerHTML+=`Engarrafe mais água de coco<br>`
+        }else if(entre2){
+            resp.innerHTML+=`Compre mais cocos<br><br>`
+        }else{
+            total1 = ag
+            total2 = cf
+
+            resp.innerHTML+=`Água engarrafada: ${ag}<br>Coco fechado:${cf}<br>`
+
+
+        }
+
+    }
+
+    function calcc(){
+
+        var q = Number(quanti.value)
+        var select = (prod.value)
+
+        var estoqueaaqua = total1 
+        var estoquecoco =  total2
+        var estoqueglobal = total1 + total2
+
+        if(select == 'Água engarrafada'){
+            resp.innerHTML+=`Com a venda de ${q} de ${select} o saldo no estoque é de ${total1 - q}<br>`
+        }else{
+            resp.innerHTML+=`Com a venda de ${q} de ${select} o saldo no estoque é de ${total2 - q}<br>`
+        }
+         
+
+        
+    }
+
+    var slaonome = 0
+    var
+    var saldoestoque = total1 - q
+
+    function encerrar(){
+        var q = Number(quanti.value)
+        slaonome = q
+         
+        resp.innerHTML=`
+        Vendas de Água engarrafada<br>
+
+        Saldo de produto no estoque: ${saldoestoque--} <br>
+
+        Quantidade de vendas: ${q}<br>
+
+        Porcentagem das vendas: ${q / slaonome}% <br><br><br>
+
+        Vendas de Coco fechado <br>
+
+        Saldo de produto no estoque: ${total2 - q} <br>
+
+        Quantidade de vendas: ${q}<br>
+
+        Porcentagem das vendas: <br>
+        `
+    }
+
+</script>
