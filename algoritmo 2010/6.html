@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="limite superior menor que 100" id="lmti">
+    <button onclick="calc()">Números cabalísticos</button>
+    <div id="resp"></div>
+</body>
+
+</html>
+
+<script>
+
+    function calc() {
+        resp.innerHTML = ``
+        var lmi = Number(lmti.value)
+
+        
+
+            for (lmi; lmi < 15; lmi++) {
+
+                if (lmi == 3 || lmi == 4 || lmi == 7 || lmi == 10 || lmi == 12 ) {
+                    lmi
+                }else{
+                    resp.innerHTML += `${lmi}<br>`
+                }
+                    
+
+            
+
+            }
+
+    }
+
+</script>
