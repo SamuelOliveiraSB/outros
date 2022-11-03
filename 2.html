@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    qual sore mesa comeu?
+    <input type="text" id="sobremesa" placeholder="sobremesa">
+    <button onclick="calc()">cadastrar</button>
+    <br>
+
+    <button onclick="mostt()">mostrar todas</button>
+    <button onclick="invertido()">mostrar</button>
+    <button onclick="colorido()">mostrar colorido</button>
+    <div id="resp"></div>
+    pesquisa <input type="text" name="" id="sorvete" placeholder="sorvete" onkeyup="sla()">
+    <div id="respp"></div>
+</body>
+
+</html>
+
+<script>
+    var sobremesas = []
+    function calc() {
+        sobremesas.push(sobremesa.value)
+        console.log(sobremesas)
+
+        resp.innerHTML = ``
+    }
+
+
+
+    function mostt() {
+
+        for (var cont = 0; cont < sobremesas.length; cont++) {
+            var atual = sobremesas[cont]
+
+
+
+            resp.innerHTML += `${cont + 1}.${atual}<br>`
+        }
+
+
+
+
+    }
+
+    function invertido() {
+
+        for (var cont = sobremesas.length - 1; cont >= 0; cont--) {
+            var atual = sobremesas[cont]
+
+
+
+            resp.innerHTML += `${cont + 1}.${atual}<br>`
+        }
+
+    }
+
+
+    function colorido() {
+        for (var cont = 0; cont < sobremesas.length; cont++) {
+            var atual = sobremesas[cont]
+
+            if (cont % 2 == 0) {
+                resp.innerHTML += `<p style="color:blue ;"> ${cont + 1}.${atual}</p><br>`
+            } else {
+                resp.innerHTML += ` ${cont + 1}.${atual}<br>`
+            }
+
+        }
+    }
+
+    function sla() {
+        var input = sorvete.value
+        var qtd = sobremesas.length
+
+        var cont2 = 0
+
+        
+
+       
+
+        for ( var cont = 0; cont < qtd ; cont++) {
+
+           
+            cont2++
+
+        }
+
+        if ( uu == input ) {
+            frase = `vc ainda não comeu`
+        } else {
+            frase = `vc comeu ${cont2} vezes`
+        }
+
+        respp.innerHTML=`${frase}`
+
+    }
+
+</script>

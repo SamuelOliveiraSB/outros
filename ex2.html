@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Destino de viagem" id="desti">
+    <button onclick="calc()">adicionar</button>
+    <div id="resp"></div>
+</body>
+
+</html>
+
+<script>
+
+    var destino = []
+    var ir = []
+    var acc = 0
+    function calc() {
+
+        destino.push(desti.value)
+
+        for(var cont = 0 ; cont < destino.length ; cont++ ){
+
+            if(destino.indexOf(desti.value) == desti.value){
+                
+            }else{
+                acc = 1
+            }
+
+
+        }
+
+        if(acc == 1 ){
+            ir.push(desti.value)
+            acc = 0
+        }
+
+        console.log(ir)
+
+
+    }
+</script>
